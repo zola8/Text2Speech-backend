@@ -1,0 +1,66 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.3.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group 'com.mz.text2speech'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+configurations {
+    compile.exclude group: 'ch.qos.logback'
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'de.dfki.mary:marytts-client:5.2'
+    compile 'de.dfki.mary:marytts-runtime:5.2'
+    compile 'de.dfki.mary:marytts:5.2'
+
+    compile 'de.dfki.mary:marytts-lang-en:5.2'
+    compile 'de.dfki.mary:marytts-lang-de:5.2'
+    compile 'de.dfki.mary:marytts-lang-fr:5.2'
+    compile 'de.dfki.mary:marytts-lang-it:5.2'
+    compile 'de.dfki.mary:marytts-lang-lb:5.2'
+    compile 'de.dfki.mary:marytts-lang-ru:5.2'
+    compile 'de.dfki.mary:marytts-lang-sv:5.2'
+    compile 'de.dfki.mary:marytts-lang-te:5.2'
+    compile 'de.dfki.mary:marytts-lang-tr:5.2'
+
+    compile 'de.dfki.mary:voice-bits1-hsmm:5.2'
+    compile 'de.dfki.mary:voice-bits3-hsmm:5.2'
+    compile 'de.dfki.mary:voice-cmu-bdl-hsmm:5.2'
+    compile 'de.dfki.mary:voice-cmu-nk-hsmm:5.2'
+    compile 'de.dfki.mary:voice-cmu-rms-hsmm:5.2'
+    compile 'de.dfki.mary:voice-cmu-slt-hsmm:5.2'
+    compile 'de.dfki.mary:voice-dfki-obadiah-hsmm:5.2'
+    compile 'de.dfki.mary:voice-dfki-ot-hsmm:5.2'
+    compile 'de.dfki.mary:voice-dfki-pavoque-neutral-hsmm:5.2'
+    compile 'de.dfki.mary:voice-dfki-poppy-hsmm:5.2'
+    compile 'de.dfki.mary:voice-dfki-prudence-hsmm:5.2'
+    compile 'de.dfki.mary:voice-dfki-spike-hsmm:5.2'
+    compile 'de.dfki.mary:voice-enst-camille-hsmm:5.2'
+    compile 'de.dfki.mary:voice-enst-dennys-hsmm:5.2'
+    compile 'de.dfki.mary:voice-istc-lucia-hsmm:5.2'
+    compile 'de.dfki.mary:voice-upmc-jessica-hsmm:5.2'
+    compile 'de.dfki.mary:voice-upmc-pierre-hsmm:5.2'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
