@@ -11,7 +11,7 @@
 
 ### Clone
 
-- Clone this repo to your local machine using `https://github.com/fvcproductions/SOMEREPO`
+- Clone this repo to your local machine using `https://github.com/zola8/Text2Speech-backend.git`
 
 ### Setup
 
